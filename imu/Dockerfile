@@ -16,7 +16,7 @@ RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash && \
                   catkin_make --only-pkg-with-deps ros_imu_bno055"
 
 # RUN echo 'source /catkin_ws/devel/setup.bash' >> /ros_entrypoint.sh
-RUN echo 'echo "Arguments received: $@"' >> /ros_entrypoint.sh
+# RUN echo 'echo "Arguments received: $@"' >> /ros_entrypoint.sh
 
 RUN pip install pyserial
 
