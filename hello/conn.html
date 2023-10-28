@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ROS WebSocket Test</title>
+    <script type="text/javascript">
+        var ws = new WebSocket("ws://172.26.45.56:9090");
+        ws.onopen = function() {
+            console.log("Connected to ROS WebSocket");
+        };
+        ws.onmessage = function(event) {
+            console.log("Received: " + event.data);
+        };
+        ws.onclose = function() {
+            console.log("Connection closed");
+        };
+    </script>
+</head>
+<body>
+    <h1>ROS WebSocket Test</h1>
+</body>
+</html>
